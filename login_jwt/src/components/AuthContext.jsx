@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
     // 컴포넌트 마운트 시 로컬 스토리지에서 인증 토큰 확인
     useEffect(() => {
         const token = localStorage.getItem("token");
+        // 토큰 유무 확인
         setIsAuthenticated(Boolean(token));
     }, []);
 
